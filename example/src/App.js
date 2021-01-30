@@ -1,10 +1,20 @@
 import React from 'react'
 
-import { ExampleComponent } from 'nepali-calender-react'
+import { Calender, useNepaliNUmber } from 'nepali-calender-react'
 import 'nepali-calender-react/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  console.log(useNepaliNUmber(55))
+
+  return (
+    <Calender
+      language='nepali'
+      onDateClicked={(result) => console.log(result)}
+      dayClickBehaviour='single'
+      mode='monthly'
+      // startDate='2020/10/21'
+    />
+  )
 }
 
 export default App

@@ -1,9 +1,130 @@
 /* add css module styles here (optional) */
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
+  
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+}
+
+p, span, ul, li {
+  color: #2d4338;
+  font-weight: 100;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 1rem;
+}
+
+.calendarCcontain {
+  position: relative;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  width: 100%;
+  overflow: hidden;
+  max-width: 1020px;
+  min-width: 450px;
+  margin: 1rem auto;
+  background-color: #f5f7f6;
+  color: #040605;
+}
+
+
+.calendarDays {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column wrap;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  width: 100%;
+  float: none;
+  min-height: 350px;
+  height: 100%;
+  font-size: 12px;
+  /* padding: 1rem 0 0 0; */
+  background: #f5f7f6;
+}
+
+.calendarTopbar {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 32px;
+          flex: 32px 0 0;
+}
+
+.topbarDays {
+  width: 100%;
+  color: #2d4338;
+  font-weight: bold;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 1rem;
   text-align: center;
+  border: 1px solid #fff;
+  padding: 1rem;
+}
+.saturday{
+  color:red;
+}
+.calendarWeek {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+}
+
+.calendarDay {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 1.2rem 0.2rem 0.2rem;
+  border: 1px solid #fff;
+  text-align: center;
+}
+.calendarDay:hover{
+  background-color: cadetblue;
+  cursor: pointer;
+}
+ .active{
+  background-color: rgb(165, 165, 165);
+}
+.holiday>.calendarDate{
+  color:red;
+}
+
+.calendarDate {
+  color: #040605;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 0.4;
+}
+@media screen and (min-width: 55em) {
+  .calendarDate {
+    font-size: 2.3rem;
+  }
+}
+
+.calendarWeek .inactive .calendarDate,
+.calendarWeek .inactive .taskCount {
+  color: #c6c6c6;
+}
+.calendarWeek .today .calendarDate {
+  color: #fd588a;
+}
+
+.calendarTask {
+  color: #040605;
+  display: -webkit-box;
+  display: flex;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 55em) {
+  .calendarTask {
+    font-size: 1rem;
+  }
+}
+.calendarTask.calendarTaskToday {
+  color: #fd588a;
 }
